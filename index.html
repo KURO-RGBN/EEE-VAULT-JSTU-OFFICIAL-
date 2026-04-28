@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download EEE Vault | JSTU</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { background-color: #000000; color: #ffffff; font-family: 'Inter', sans-serif; }
+        .glass-dark { 
+            background: rgba(255, 255, 255, 0.03); 
+            backdrop-filter: blur(10px); 
+            border: 1px solid rgba(255, 255, 255, 0.08); 
+        }
+        .red-gradient-text {
+            background: linear-gradient(to right, #ffffff, #ff4d4d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <section class="relative min-h-screen flex flex-col items-center justify-center p-6 text-center">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-red-600/10 blur-[120px] rounded-full"></div>
+
+        <div class="relative z-10">
+            <div class="mb-6 inline-block p-4 rounded-3xl bg-red-600 shadow-[0_0_50px_rgba(220,38,38,0.3)] animate-float">
+                <i class="fa-solid fa-brain text-white text-5xl"></i>
+            </div>
+            <h1 class="text-6xl md:text-8xl font-black tracking-tighter mb-4">
+                EEE <span class="text-red-600">VAULT</span>
+            </h1>
+            <p class="text-slate-400 tracking-[0.4em] uppercase text-sm font-bold mb-12">
+                The Ultimate Resource Archive
+            </p>
+
+            <a href="https://raw.githubusercontent.com/KURO-RGBN/NOTES-STORAGE-01/main/EEE_Vault_v1.apk" 
+               class="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 text-white px-10 py-5 rounded-2xl font-black text-xl transition-all hover:scale-105 active:scale-95 shadow-[0_20px_50px_rgba(220,38,38,0.3)]">
+                <i class="fa-solid fa-download"></i> DOWNLOAD APK
+            </a>
+            <p class="mt-4 text-slate-500 text-xs font-medium">v1.2.0 • Android 8.0+ Required</p>
+        </div>
+    </section>
+
+    <section class="max-w-4xl mx-auto px-6 py-24">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="glass-dark p-8 rounded-[40px]">
+                <h2 class="text-2xl font-black mb-4 red-gradient-text">ABOUT THE VAULT</h2>
+                <p class="text-slate-400 leading-relaxed text-sm">
+                    EEE Vault is a high-performance digital repository engineered for JSTU students. It eliminates the struggle of finding past papers and class notes by providing a lightning-fast, organized interface.
+                </p>
+                <div class="mt-6 space-y-3">
+                    <div class="flex items-center gap-3 text-xs font-bold text-slate-300">
+                        <i class="fa-solid fa-check text-red-600"></i> SLIDING IMAGE VIEWER
+                    </div>
+                    <div class="flex items-center gap-3 text-xs font-bold text-slate-300">
+                        <i class="fa-solid fa-check text-red-600"></i> OFFLINE PDF DOWNLOADS
+                    </div>
+                    <div class="flex items-center gap-3 text-xs font-bold text-slate-300">
+                        <i class="fa-solid fa-check text-red-600"></i> BATCH-WISE FILTERING
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <h3 class="text-sm font-black tracking-widest text-red-600 uppercase">Development Team</h3>
+                <div class="glass-dark p-6 rounded-3xl border-l-4 border-red-600">
+                    <h4 class="font-black text-xl">SAIDUL ISLAM KURO</h4>
+                    <p class="text-slate-500 text-xs uppercase tracking-tighter font-bold">Lead Developer & UI Designer</p>
+                </div>
+                <div class="glass-dark p-6 rounded-3xl opacity-60">
+                    <h4 class="font-black text-lg">BATCH 06 MGMT</h4>
+                    <p class="text-slate-500 text-xs uppercase font-bold">Resource Management & Verification</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center border-t border-white/5">
+        <p class="text-[10px] text-slate-600 font-bold tracking-widest uppercase">
+            Jamalpur Science & Technology University • EEE Department
+        </p>
+        <p class="text-slate-400 text-[10px] mt-2 italic">© 2026 EEE Vault Portal. For the students, by the students.</p>
+    </footer>
+
+</body>
+</html>
