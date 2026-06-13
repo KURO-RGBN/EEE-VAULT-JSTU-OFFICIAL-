@@ -8,105 +8,175 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         html { scroll-behavior: smooth; }
-        body { background-color: #000000; color: #ffffff; font-family: 'Inter', sans-serif; }
+        
+        /* Custom Color Pallet Implementations */
+        body { 
+            background-color: #1A1A1A; 
+            color: #f8f8f8; 
+            font-family: 'Inter', sans-serif; 
+        }
+        
         .glass-dark { 
-            background: rgba(255, 255, 255, 0.03); 
-            backdrop-filter: blur(10px); 
-            border: 1px solid rgba(255, 255, 255, 0.08); 
+            background: rgba(255, 255, 255, 0.02); 
+            backdrop-filter: blur(16px); 
+            border: 1px solid rgba(255, 255, 255, 0.05); 
         }
-        .red-gradient-text {
-            background: linear-gradient(to right, #ffffff, #ff4d4d);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        
+        .premium-border {
+            border: 1px solid rgba(255, 48, 64, 0.2);
         }
+
+        .text-premium-red {
+            color: #ff3040;
+        }
+
+        .bg-premium-red {
+            background-color: #ff3040;
+        }
+
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
+            50% { transform: translateY(-12px); }
         }
-        .animate-float { animation: float 6s ease-in-out infinite; }
+        .animate-float { animation: float 5s ease-in-out infinite; }
     </style>
 </head>
-<body class="overflow-x-hidden">
+<body class="overflow-x-hidden antialiased">
 
-    <section class="relative min-h-[90vh] flex flex-col items-center justify-center p-6 text-center">
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-red-600/20 blur-[100px] rounded-full"></div>
+    <!-- Hero Access Portal Section -->
+    <section class="relative min-h-screen flex flex-col items-center justify-center p-4 md:p-8 text-center">
+        <!-- Ambient Background Glow -->
+        <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] md:w-[500px] h-[350px] bg-[#ff3040]/10 blur-[120px] rounded-full pointer-events-none"></div>
 
-        <div class="relative z-10 mt-[-5vh]">
-            <div class="mb-6 inline-block p-4 rounded-3xl bg-red-600 shadow-[0_0_50px_rgba(220,38,38,0.3)] animate-float">
-                <i class="fa-solid fa-brain text-white text-5xl"></i>
+        <div class="relative z-10 w-full max-w-4xl mx-auto">
+            <!-- Branding Header -->
+            <div class="mb-6 inline-block p-4 rounded-[24px] bg-[#1A1A1A] border border-white/5 shadow-[0_0_40px_rgba(255,48,64,0.15)] animate-float">
+                <i class="fa-solid fa-brain text-premium-red text-4xl md:text-5xl"></i>
             </div>
-            <h1 class="text-5xl md:text-8xl font-black tracking-tighter mb-4">
-                EEE <span class="text-red-600">VAULT</span> JSTU
+            
+            <h1 class="text-4xl md:text-7xl font-black tracking-tighter mb-3 uppercase">
+                EEE <span class="text-premium-red">Vault</span> JSTU
             </h1>
-            <p class="text-slate-400 tracking-[0.3em] uppercase text-[10px] font-bold mb-10">
-                The Ultimate Resource Archive
+            <p class="text-slate-400 tracking-[0.4em] uppercase text-[9px] md:text-[10px] font-black mb-12">
+                The Ultimate Digital Resource Archive
             </p>
 
-            <div class="flex flex-col items-center gap-6">
-                <a href="https://raw.githubusercontent.com/KURO-RGBN/EEE-VAULT-JSTU-OFFICIAL-/main/EEE%20VAULT%20JSTU.apk" 
-                   class="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-2xl font-black text-lg transition-all hover:scale-105 active:scale-95 shadow-[0_20px_50px_rgba(220,38,38,0.3)]">
-                    <i class="fa-solid fa-download"></i> DOWNLOAD APK
-                </a>
-
-                <div class="max-w-[320px] bg-white/5 border border-white/10 p-4 rounded-2xl">
-                    <p class="text-[10px] text-slate-400 leading-relaxed text-left">
-                        <span class="text-red-500 font-black uppercase mr-1">Note:</span> 
-                        Android may show a "File might be harmful" warning. 
-                        <strong>Select "Install anyway."</strong> This app is safe and strictly tested for JSTU students.
-                    </p>
+            <!-- Dual-Channel Access Core Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto items-stretch mb-10">
+                
+                <!-- Option 1: Mobile App Package Installation -->
+                <div class="glass-dark premium-border p-6 md:p-8 rounded-[32px] flex flex-col justify-between text-left transition-all hover:border-[#ff3040]/40 group">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="text-[9px] bg-[#ff3040]/10 text-premium-red font-black tracking-widest uppercase px-3 py-1 rounded-full">Native Client</span>
+                            <span class="text-slate-500 text-[10px] font-bold tracking-wider">v1.2.0 • Android</span>
+                        </div>
+                        <h2 class="text-xl font-bold mb-2 text-white">Android Application</h2>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-6">
+                            Access the vault smoothly directly from your device home screen with full multi-touch gesture image viewers and immersive offline caching behaviors.
+                        </p>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <a href="https://raw.githubusercontent.com/KURO-RGBN/EEE-VAULT-JSTU-OFFICIAL-/main/EEE%20VAULT%20JSTU.apk" 
+                           class="w-full inline-flex items-center justify-center gap-3 bg-premium-red hover:bg-[#e02635] text-white py-4 rounded-xl font-black text-sm transition-all shadow-[0_10px_30px_rgba(255,48,64,0.2)] active:scale-[0.98]">
+                            <i class="fa-solid fa-cube text-base"></i> DOWNLOAD APK BINARY
+                        </a>
+                        
+                        <!-- Safe Notice Area structured using #f8f8f8 background text properties -->
+                        <div class="bg-[#f8f8f8] p-3.5 rounded-xl border border-slate-200">
+                            <p class="text-[10px] text-slate-700 font-medium leading-relaxed">
+                                <span class="text-premium-red font-black uppercase mr-1"><i class="fa-solid fa-triangle-exclamation"></i> Security Note:</span> 
+                                If system tags this as an "Unverified App Check," bypass via <strong>Install Anyway</strong>. The file safe build is built directly via framework wrappers for JSTU departments.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <p class="text-slate-500 text-[10px] font-medium tracking-widest">v1.2.0 • Android 8.0+</p>
+
+                <!-- Option 2: Instant Web App Portal Redesign Section -->
+                <div class="glass-dark p-6 md:p-8 rounded-[32px] border border-white/5 flex flex-col justify-between text-left transition-all hover:border-white/20">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="text-[9px] bg-white/5 text-slate-300 font-black tracking-widest uppercase px-3 py-1 rounded-full">Cloud Instant</span>
+                            <span class="text-slate-500 text-[10px] font-bold tracking-wider">Zero-Install • Universal</span>
+                        </div>
+                        <h2 class="text-xl font-bold mb-2 text-white">Web Portal Architecture</h2>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-6">
+                            Don't want to manage application files or bypass security alerts? Run the full portal instantaneously directly inside your current browser layout without loss of functionality.
+                        </p>
+                    </div>
+
+                    <div class="space-y-3">
+                        <a href="https://kuro-rgbn.github.io/EEE-VAULT-JSTU" 
+                           class="w-full inline-flex items-center justify-center gap-3 bg-zinc-800 hover:bg-zinc-700 text-[#f8f8f8] border border-white/10 py-4 rounded-xl font-black text-sm transition-all active:scale-[0.98]">
+                            <i class="fa-solid fa-globe text-premium-red"></i> LAUNCH INSTANT WEB APP
+                        </a>
+                        <p class="text-center text-slate-500 text-[9px] font-bold uppercase tracking-widest py-2">
+                            <i class="fa-solid fa-bolt text-amber-500 mr-1"></i> Recommended for Desktop & iOS Devices
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </div>
 
-        <a href="#about" class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-500 hover:text-white transition-colors">
-            <span class="text-[9px] font-black uppercase tracking-[0.2em]">About & Team</span>
-            <i class="fa-solid fa-chevron-down animate-bounce text-red-600"></i>
+        <!-- Section anchor point controller -->
+        <a href="#about" class="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-slate-500 hover:text-white transition-colors">
+            <span class="text-[9px] font-black uppercase tracking-[0.25em]">About Hub & Manifest</span>
+            <i class="fa-solid fa-circle-chevron-down animate-bounce text-premium-red mt-1"></i>
         </a>
     </section>
 
-    <section id="about" class="max-w-4xl mx-auto px-6 py-20">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-            <div class="glass-dark p-8 rounded-[32px]">
-                <h2 class="text-xl font-black mb-4 red-gradient-text uppercase tracking-tight">About the Vault</h2>
-                <p class="text-slate-400 leading-relaxed text-sm">
-                    EEE Vault JSTU is a high-performance application engineered for students of the EEE department at Jamalpur Science & Technology University.
+    <!-- Operational Context & Management Manifest Info -->
+    <section id="about" class="max-w-4xl mx-auto px-6 py-24 border-t border-white/5">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+            
+            <!-- Context Sheet -->
+            <div class="glass-dark p-8 rounded-[28px] border border-white/5">
+                <h3 class="text-xs font-black tracking-widest text-premium-red uppercase mb-2">Systems Index</h3>
+                <h2 class="text-2xl font-black mb-4 text-white uppercase tracking-tight">Core System Specs</h2>
+                <p class="text-slate-400 leading-relaxed text-sm mb-6">
+                    EEE Vault JSTU platform hosts highly optimized document distribution modules created intentionally for managing real-time file access loads for terminal engineering batches.
                 </p>
-                <div class="mt-6 space-y-3">
-                    <div class="flex items-center gap-3 text-[9px] font-bold text-slate-300">
-                        <i class="fa-solid fa-check text-red-600"></i> SESSION WISE QUESTION PAPERS
+                <div class="space-y-3 pt-2">
+                    <div class="flex items-center gap-3 text-[10px] font-black text-slate-300 tracking-wide uppercase">
+                        <i class="fa-solid fa-square-poll-horizontal text-premium-red text-xs"></i> Session-Wise Filter Matrices
                     </div>
-                    <div class="flex items-center gap-3 text-[9px] font-bold text-slate-300">
-                        <i class="fa-solid fa-check text-red-600"></i> DOWNLOAD NOTES & MATERIALS
+                    <div class="flex items-center gap-3 text-[10px] font-black text-slate-300 tracking-wide uppercase">
+                        <i class="fa-solid fa-file-shield text-premium-red text-xs"></i> Isolated Content Document Servers
                     </div>
                 </div>
             </div>
 
+            <!-- Development Directory Info -->
             <div class="space-y-4">
-                <h3 class="text-[10px] font-black tracking-widest text-red-600 uppercase ml-2">Development Team</h3>
-                <div class="glass-dark p-6 rounded-2xl border-l-4 border-red-600">
-                    <h4 class="font-black text-lg">SAIDUL ISLAM KURO</h4>
-                    <p class="text-slate-500 text-[10px] uppercase tracking-tighter font-bold">Lead Developer & UI Designer</p>
+                <h3 class="text-[10px] font-black tracking-widest text-premium-red uppercase ml-2">Core Registry Administrators</h3>
+                
+                <div class="glass-dark p-5 rounded-2xl border-l-2 border-premium-red bg-white/[0.01]">
+                    <h4 class="font-black text-base text-white tracking-wide">SAIDUL ISLAM KURO</h4>
+                    <p class="text-slate-500 text-[9px] uppercase tracking-wider font-bold mt-0.5">Systems Architecture & Base UI Designer</p>
                 </div>
-                <div class="glass-dark p-6 rounded-2xl">
-                    <div class="flex flex-col gap-1">
-                        <h4 class="font-black text-md">SAIFUL ISLAM</h4>
-                        <h4 class="font-black text-md">TANVIR AHMED</h4>
+                
+                <div class="glass-dark p-5 rounded-2xl border-l-2 border-zinc-700">
+                    <div class="flex flex-col gap-1 text-slate-300">
+                        <h4 class="font-black text-sm tracking-wide">SAIFUL ISLAM</h4>
+                        <h4 class="font-black text-sm tracking-wide">TANVIR AHMED</h4>
                     </div>
-                    <p class="text-slate-500 text-[10px] uppercase font-bold mt-2">Resource Management</p>
+                    <p class="text-slate-500 text-[9px] uppercase tracking-wider font-bold mt-1.5">Asset Pipelines & Academic Repositories</p>
                 </div>
             </div>
+            
         </div>
     </section>
 
-    <footer class="py-10 text-center border-t border-white/5 bg-zinc-950">
-        <p class="text-[9px] text-slate-600 font-bold tracking-widest uppercase px-4">
-            Jamalpur Science & Technology University • EEE Department
+    <!-- Footer System Identity Elements -->
+    <footer class="py-12 text-center border-t border-white/5 bg-[#111111]">
+        <p class="text-[9px] text-slate-500 font-black tracking-[0.2em] uppercase px-4">
+            Jamalpur Science & Technology University • Department of Electrical and Electronic Engineering
         </p>
-        <p class="text-slate-500 text-[9px] mt-2 italic">© 2026 EEE Vault Portal</p>
+        <p class="text-slate-600 text-[9px] mt-2 font-mono">Build v1.2.0 production // Cloud Hosted Deployment Portal</p>
+        <p class="text-slate-600 text-[9px] mt-4 italic">© 2026 EEE Vault Base Portal</p>
     </footer>
 
 </body>
 </html>
-
-
